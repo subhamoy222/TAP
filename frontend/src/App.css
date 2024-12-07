@@ -1,0 +1,1672 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Body background color */
+body {
+  background-color: #f5f5f5; /* Light grey background for a clean look */
+  font-family: 'Roboto', sans-serif;
+  color: #333; /* Default text color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings styling */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; /* Modern font for headings */
+  color: #2c3e50; /* Darker color for headings */
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700; /* Bold */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Soft shadow for better readability */
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 600; /* Semi-bold */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 500; /* Medium weight */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 400; /* Normal weight */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+h5 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+h6 {
+  font-size: 1.5rem;
+  font-weight: 300; /* Light weight */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Paragraph styling */
+p {
+  font-size: 1.25rem;
+  color: #555; /* Dark grey text */
+  line-height: 1.6; /* Increased line height for readability */
+}
+
+/* Responsive font sizes */
+@media (max-width: 1520px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.75rem; }
+  h3 { font-size: 2.25rem; }
+  h4 { font-size: 1.75rem; }
+  h5 { font-size: 1.5rem; }
+  h6 { font-size: 1.25rem; }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2.25rem; }
+  h3 { font-size: 2rem; }
+  h4 { font-size: 1.5rem; }
+  h5 { font-size: 1.25rem; }
+  h6 { font-size: 1rem; }
+  p { font-size: 1rem; }
+}
+
+
+.authPage {
+  display: flex;
+  min-width: 1500px;
+  max-width: 1500px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.authPage .container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f5f7fa;
+  padding: 40px 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.authPage .container .header {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.authPage .container .header h3 {
+  font-size: 1.8rem;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.authPage .container .header img {
+  width: 300px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.authPage .container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.authPage .container form .inputTag {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.authPage .container form .inputTag div {
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  border: 1px solid #ddd;
+}
+
+.authPage .container form .inputTag div input,
+.authPage .container form .inputTag div select {
+  background: #f5f7fa;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px 0 0 7px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.authPage .container form .inputTag div input:focus,
+.authPage .container form .inputTag div select:focus {
+  outline: none;
+  border: 1px solid #3f51b5;
+}
+
+.authPage .container form .inputTag div svg {
+  width: 10%;
+  font-size: 1.5rem;
+  background: #3f51b5;
+  height: 100%;
+  padding: 10px;
+  color: #f5f7fa;
+  border-radius: 0 7px 7px 0;
+}
+
+.authPage .container form button {
+  padding: 15px;
+  text-align: center;
+  border: none;
+  margin-top: 25px;
+  font-weight: 700;
+  color: #f5f7fa;
+  background: #3f51b5;
+  font-size: 1.2rem;
+  border-radius: 7px;
+  transition: background 0.3s;
+}
+
+.authPage .container form button:hover {
+  background: #303f9f;
+}
+
+.authPage .container form a {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #3f51b5;
+  margin-top: 25px;
+  font-weight: 700;
+  color: #3f51b5;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 7px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.authPage .container form a:hover {
+  background: #3f51b5;
+  color: #f5f7fa;
+}
+
+.authPage .banner {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.authPage .banner img {
+  width: 90%;
+  width: 550px;
+  height: 550px;
+  border-radius: 10px;
+}
+
+@media (max-width: 1520px) {
+  .authPage {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 830px) {
+  .authPage {
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+  }
+  .authPage .container {
+    width: 90%;
+    padding: 40px 20px;
+  }
+  .authPage .banner {
+    display: none;
+  }
+}
+
+
+
+.footerShow {
+  background: #18191c;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 120px;
+  align-items: center;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #2d5649;
+}
+
+.footerShow div {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  color: #f1f3f6;
+  align-items: center;
+}
+
+.footerShow div a {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #f1f3f6;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footerShow div a:hover {
+  color: #3f51b5;
+  transform: scale(1.2);
+}
+
+.footerShow .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footerShow .social-icons a {
+  font-size: 1.5rem;
+  color: #f1f3f6;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footerShow .social-icons a:hover {
+  color: #3f51b5;
+  transform: scale(1.2);
+}
+
+.footerHide {
+  display: none;
+}
+
+@media (max-width: 830px) {
+  .footerShow {
+    padding: 25px 45px;
+  }
+}
+
+@media (max-width: 550px) {
+  .footerShow {
+    flex-direction: column-reverse;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .footerShow div {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footerShow .social-icons {
+    gap: 20px;
+  }
+}
+
+
+.navbarHide {
+  display: none;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  padding: 75px 0 50px 0;
+  background: linear-gradient(135deg, #f5f7fa, #e1e8f0);
+}
+
+.heroSection .container,
+.heroSection .details {
+  min-width: 1500px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.heroSection .container {
+  display: flex;
+  height: 450px;
+  margin-bottom: 1.75rem;
+}
+
+.heroSection .container .title,
+.heroSection .container .image {
+  flex: 1;
+}
+
+.heroSection .container .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.heroSection .container .title h1 {
+  max-width: 600px;
+  font-family: 'Roboto', sans-serif;
+  color: #2d5649;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.heroSection .container .title p {
+  margin-top: 1.5rem;
+  max-width: 600px;
+  font-family: 'Roboto', sans-serif;
+  color: #555;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.heroSection .container .image {
+  overflow: hidden;
+}
+
+.heroSection .container .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.heroSection .details {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.heroSection .details .card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #fff;
+  width: 220px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  animation: fadeInUp 2.5s ease-in-out;
+}
+
+.heroSection .details .card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.heroSection .details .card .icon {
+  font-size: 24px;
+  background: #e9f9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: #3f51b5;
+  border-radius: 50%;
+}
+
+.heroSection .details .card .content p:first-child {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  color: #2d5649;
+  font-size: 1.2rem;
+}
+
+.heroSection .details .card .content p:nth-child(2) {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1520px) {
+  .heroSection .container,
+  .heroSection .details {
+    min-width: 100%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .heroSection .container {
+    flex-direction: column-reverse;
+    position: relative;
+    min-height: 600px;
+  }
+
+  .heroSection .container .title {
+    z-index: 1;
+    text-align: center;
+  }
+
+  .heroSection .container .title h1,
+  .heroSection .container .title p {
+    max-width: 100%;
+  }
+
+  .heroSection .container .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 950px) {
+  .heroSection .details {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-evenly;
+  }
+
+  .heroSection .details .card {
+    width: 300px;
+    flex: none;
+  }
+}
+
+@media (max-width: 670px) {
+  .heroSection .details .card {
+    max-width: 350px;
+    min-width: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  .heroSection .details .card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+.howitworks {
+  background: #f5f7fa;
+  font-family: 'Roboto', sans-serif;
+}
+
+.howitworks .container {
+  max-width: 1500px;
+  min-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  padding: 60px 0;
+  gap: 60px;
+}
+
+.howitworks .container .banner {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.howitworks .container .banner .card {
+  background: #fff;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 400px;
+  padding: 40px 50px;
+  gap: 20px;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.howitworks .container .banner .card:nth-child(2) {
+  background: #000; /* Changed to black */
+  color: #fff;
+}
+
+.howitworks .container .banner .card svg {
+  font-size: 35px;
+  color: #3f729b;
+  margin-bottom: 15px;
+}
+
+.howitworks .container .banner .card:nth-child(2) svg {
+  color: #fff; /* Ensured icon color is white for contrast */
+}
+
+.howitworks .container .banner .card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.howitworks .container .banner .card:nth-child(2) p {
+  color: #fff; /* Set text color to white for readability on black background */
+}
+
+.howitworks .container .banner .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1520px) {
+  .howitworks .container {
+    min-width: 100%;
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .howitworks .container .banner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .howitworks .container .banner .card {
+    flex: none;
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .howitworks .container .banner .card {
+    width: 100%;
+  }
+}
+
+
+.categories {
+  min-width: 1500px;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 50px 0;
+  gap: 35px;
+}
+.categories .banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 20px 0;
+}
+.categories .banner .card {
+  width: 320px;
+  background: red;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f1f3f6;
+}
+.categories .banner .card:hover {
+  transition: all 0.3s;
+  box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
+}
+.categories .banner .card .icon {
+  font-size: 24px;
+  padding: 10px;
+  background: rgb(233, 249, 255);
+  color: #2d5649;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.categories .banner .card .text p:nth-child(1) {
+  font-size: 16px;
+  font-weight: bold;
+}
+.categories .banner .card .text p:nth-child(2) {
+  font-size: 14px;
+  font-weight: 300;
+  color: gray;
+}
+@media (max-width: 1520px) {
+  .categories {
+    min-width: 100%;
+    padding: 50px 20px;
+  }
+}
+@media (max-width: 714px) {
+  .categories {
+    align-items: center;
+  }
+  .categories .banner {
+    justify-content: center;
+  }
+}
+@media (max-width: 350px) {
+  .categories .banner .card {
+    width: 100%;
+  }
+}
+
+.companies {
+  background: #f1f3f6;
+  padding: 50px 0;
+}
+.companies .container {
+  min-width: 1500px;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+.companies .container .banner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+}
+.companies .container .banner .card {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px;
+  gap: 15px;
+}
+.companies .container .banner .card:hover {
+  transition: all 0.3s;
+  box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 2px 10px 10px -1px rgba(0, 0, 0, 0.17);
+}
+.companies .container .banner .card .content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.companies .container .banner .card .content .icon {
+  padding: 10px;
+  font-size: 24px;
+  color: #2d5649;
+  background: rgb(233, 249, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.companies .container .banner .card .content .text p:first-child {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.companies .container .banner .card .content .text p:last-child {
+  font-size: 15px;
+  color: gray;
+}
+.companies .container .banner .card button {
+  color: #2d5649;
+  background: rgb(233, 249, 255);
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  padding: 7px 0;
+  margin-top: 10px;
+}
+@media (max-width: 1520px) {
+  .companies .container {
+    min-width: 100%;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 1100px) {
+  .companies .container .banner {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .companies .container .banner .card {
+    width: 420px;
+  }
+}
+@media (max-width: 470px) {
+  .companies .container .banner .card {
+    width: 100%;
+  }
+}
+
+/* jobdetails */
+
+.jobs {
+  background: #f1f3f6;
+  min-height: 100vh;
+  padding: 50px 20px;
+}
+
+.jobs .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  gap: 35px;
+}
+
+.jobs .container .banner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 30px;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.jobs .container .banner .card {
+  background: #ffffff;
+  text-decoration: none;
+  width: 350px; /* Increased card width */
+  height: 250px; /* Increased card height */
+  padding: 25px; /* Increased padding */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap between elements */
+  justify-content: center;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  transition: all 0.3s;
+}
+
+.jobs .container .banner .card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.jobs .container .banner .card p:first-child {
+  font-weight: 600; /* Increased font weight */
+  font-size: 1.8rem; /* Larger font size */
+  color: #333; /* Darker text color */
+  font-family: 'Arial', sans-serif; /* Font style */
+}
+
+.jobs .container .banner .card p:nth-child(2) {
+  font-size: 1.4rem; /* Larger font size */
+  color: #666; /* Medium gray color */
+  font-family: 'Arial', sans-serif; /* Font style */
+}
+
+.jobs .container .banner .card p:last-child {
+  font-size: 1.2rem; /* Larger font size */
+  color: #888; /* Light gray color */
+  font-family: 'Arial', sans-serif; /* Font style */
+}
+
+.jobs .container .banner .card a {
+  text-decoration: none;
+  padding: 10px; /* Increased padding */
+  font-size: 22px; /* Larger font size */
+  color: #ffffff; /* White text color */
+  background: #2d5649; /* Darker background */
+  border-radius: 5px; /* Rounded corners */
+  display: block;
+  text-align: center;
+  font-weight: 500; /* Semi-bold text */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.jobs .container .banner .card a:hover {
+  background-color: #1f3d30; /* Darker background on hover */
+}
+
+@media (max-width: 1520px) {
+  .jobs .container {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 1060px) {
+  .jobs .container .banner .card {
+    width: 400px; /* Adjusted width for smaller screens */
+  }
+}
+
+@media (max-width: 795px) {
+  .jobs .container .banner .card {
+    width: 100%; /* Full width for very small screens */
+  }
+}
+
+.jobDetail {
+  background: #f1f3f6;
+  padding: 50px 20px;
+}
+
+.jobDetail .container {
+  max-width: 1200px; /* Decreased container width */
+  min-width: 1200px; /* Decreased container width */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jobDetail .container .banner {
+  width: 100%;
+  min-height: 767px;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+}
+
+.jobDetail .container .banner .card {
+  background: #000000; /* Black background color */
+  color: #ffffff; /* White text color */
+  width: 300px; /* Decreased card width */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow for 3D effect */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Arial', sans-serif; /* Changed font style */
+}
+
+.jobDetail .container .banner .card h2 {
+  font-size: 24px; /* Increased font size for heading */
+  font-weight: bold;
+  margin: 0;
+}
+
+.jobDetail .container .banner .card p {
+  font-size: 16px; /* Adjusted font size for text */
+  margin: 0;
+}
+
+.jobDetail .container .banner a {
+  background-color: #2d5649; /* Dark green background for buttons */
+  color: #ffffff; /* White text color */
+  font-size: 18px; /* Adjusted font size */
+  font-weight: 500; /* Semi-bold font weight */
+  border: none;
+  padding: 12px 24px; /* Adjusted padding */
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners */
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.jobDetail .container .banner a:hover {
+  background-color: #1f3d30; /* Darker green on hover */
+}
+
+@media (max-width: 1200px) {
+  .jobDetail .container {
+    min-width: 100%;
+  }
+}
+
+/* Application Section */
+.application {
+  display: flex;
+  flex-direction: column;
+}
+
+.application .container {
+  min-width: 1000px; /* Adjusted for better responsiveness */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.application .container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 550px; /* Adjusted width */
+  padding: 40px 20px;
+  gap: 20px; /* Slightly reduced gap */
+  margin: 0 auto;
+  background-color: #ffffff; /* White background for form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.application .container form input,
+.application .container form textarea {
+  border: 1px solid #007bff; /* Blue border */
+  border-radius: 4px; /* Rounded corners for inputs */
+  padding: 12px 8px;
+  font-size: 18px; /* Adjusted font size */
+}
+
+.application .container form input:focus,
+.application .container form textarea:focus {
+  outline: none;
+  border-color: #0056b3; /* Darker blue on focus */
+}
+
+.application .container form button {
+  background-color: #007bff; /* Blue background */
+  color: #ffffff; /* White text */
+  font-size: 18px; /* Adjusted font size */
+  font-weight: 500; /* Semi-bold font weight */
+  border: none;
+  padding: 12px 24px; /* Adjusted padding */
+  
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.application .container form button:hover {
+  background-color: black; /* Darker blue on hover */
+}
+
+/* My Applications Section */
+.my_applications {
+  background: #e9ecef; /* Light grey background */
+  padding: 50px 20px;
+  min-height: 885px;
+}
+
+.my_applications .container {
+  max-width: 1200px; /* Adjusted width */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Increased gap */
+}
+
+/* Job Seeker Card */
+/* Ensure that any other styles are overridden */
+.job_seeker_card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #333; /* Dark border to distinguish the card */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  background-color: #e9ecef; /* Background color */
+  color: black; /* Text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.job_seeker_card:hover {
+  background-color: #d6d6d6; /* Slightly darker background color on hover */
+  border-color: #0056b3; /* Change border color on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increase shadow for a lifted effect */
+  transform: scale(1.02); /* Slightly enlarge the card */
+}
+
+.job_seeker_card h2, .job_seeker_card p {
+  margin: 0;
+}
+
+
+.job_seeker_card .detail {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #ffffff; /* Ensure text color is white */
+}
+
+.job_seeker_card .detail span {
+  font-weight: bold; /* Bold text for labels */
+}
+
+.job_seeker_card .resume {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 250px;
+}
+
+.job_seeker_card .resume img {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.job_seeker_card .btn_area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.job_seeker_card .btn_area button {
+  background: #e74c3c; /* Bright red background for button */
+  color: #ffffff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px; /* Adjusted font size */
+  font-weight: 500; /* Semi-bold font weight */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.job_seeker_card .btn_area button:hover {
+  background: #c0392b; /* Darker red on hover */
+}
+
+/* Media Queries */
+@media (max-width: 1520px) {
+  .application .container,
+  .my_applications .container {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .job_seeker_card .detail,
+  .job_seeker_card .resume,
+  .job_seeker_card .btn_area {
+    flex: 1;
+  }
+}
+
+@media (max-width: 850px) {
+  .job_seeker_card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job_seeker_card .resume {
+    width: 100%;
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .job_seeker_card,
+  .job_seeker_card .resume {
+    width: 100%;
+  }
+}
+
+
+.job_post {
+  background: whitesmoke; /* Dark blue background for the section */
+  padding: 50px 20px;
+  min-height: 870px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+}
+
+.job_post .container {
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the card horizontally */
+}
+
+.job_post .container .card {
+  background: #f1f1f1; /* Black background for the card */
+  color: black; /* White text color */
+  padding: 30px; /* Padding inside the card */
+  border-radius: 8px; /* Rounded corners for the card */
+  width: 100%;
+  max-width: 800px; /* Maximum width of the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+.job_post .container .card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.job_post .container .card h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.job_post .container .card form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.job_post .container .card form .wrapper {
+  display: flex;
+  gap: 5vw;
+}
+
+.job_post .container .card form .wrapper input,
+.job_post .container .card form .wrapper select,
+.job_post .container .card form input,
+.job_post .container .card form textarea {
+  flex: 1;
+  font-size: 18px; /* Slightly smaller font size for inputs */
+  padding: 12px 8px; /* Increased padding for better appearance */
+  border: none;
+  background: whitesmoke; /* Dark background for inputs */
+  color: black; /* White text color for inputs */
+  border-bottom: 2px solid #3498db; /* Blue border for inputs */
+}
+
+.job_post .container .card form input:focus,
+.job_post .container .card form .wrapper input:focus,
+.job_post .container .card form .wrapper select:focus,
+.job_post .container .card form textarea:focus,
+.job_post .container .card form .salary_wrapper select:focus {
+  outline: none;
+  border-bottom: 2px solid #2980b9; /* Darker blue border on focus */
+}
+
+.job_post .container .card form .salary_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job_post .container .card form .salary_wrapper p {
+  color: #e74c3c; /* Red text for error messages */
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.job_post .container .card form .salary_wrapper select {
+  width: fit-content;
+  font-size: 18px;
+  padding: 12px 8px;
+  background: #333; /* Dark background for select */
+  color: #fff; /* White text color for select */
+  border: none;
+  border-bottom: 2px solid #3498db;
+}
+
+.job_post .container .card form .salary_wrapper .ranged_salary {
+  display: flex;
+  gap: 5vw;
+}
+
+.job_post .container .card form button {
+  width: 100%;
+  background: #3498db; /* Blue background for the button */
+  font-size: 20px;
+  padding: 12px 30px;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: background 0.3s ease; /* Transition for hover effect */
+}
+
+.job_post .container .card form button:hover {
+  background: #2980b9; /* Darker blue on hover */
+}
+
+@media (max-width: 1520px) {
+  .job_post .container {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 630px) {
+  .job_post .container {
+    min-width: 100%;
+  }
+  .job_post .container .card form .wrapper,
+  .job_post .container .card form .salary_wrapper,
+  .job_post .container .card form .salary_wrapper .ranged_salary {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .job_post .container .card form .salary_wrapper select {
+    width: 100%;
+  }
+}
+
+.myJobs {
+  background: #f1f3f6;
+  padding: 50px 20px;
+  min-height: 870px;
+}
+.myJobs .container {
+  min-width: 1500px;
+  max-width: 1500px;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.myJobs .container .banner {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: column;
+}
+.myJobs .container .banner .card {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  border: 1px solid #18191c;
+  padding: 20px;
+  background: whitesmoke; /* Black background for the card */
+  color: rgba(0, 0, 0, 0.734); /* White text color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+.myJobs .container .banner .card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect on hover */
+}
+.myJobs .container .banner .card .content {
+  flex: 3;
+  display: flex;
+  gap: 20px;
+}
+.myJobs .container .banner .card .content span {
+  font-size: 20px;
+  margin-right: 6px;
+  font-weight: bold;
+}
+.myJobs .container .banner .card .content input,
+.myJobs .container .banner .card .content select {
+  background: transparent;
+  font-size: 16px;
+  border: none;
+  color: black; /* White text color for input and select */
+  padding: 7px 4px;
+}
+.myJobs .container .banner .card .content input:enabled,
+.myJobs .container .banner .card .content select:enabled {
+  border-bottom: 1px solid gainsboro;
+}
+.myJobs .container .banner .card .content input:disabled,
+.myJobs .container .banner .card .content select:disabled {
+  color: black;
+}
+.myJobs .container .banner .card .content .short_fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.myJobs .container .banner .card .content .long_field {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.myJobs .container .banner .card .content .short_fields div,
+.myJobs .container .banner .card .content .long_field div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.myJobs .container .banner .card .content .short_fields div div {
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+}
+.myJobs .container .banner .card .content .long_field textarea {
+  background: transparent;
+  font-size: 16px;
+  color: black; /* White text color for textarea */
+  border: none;
+  padding: 7px 4px;
+  height: fit-content;
+}
+.myJobs .container .banner .card .content .long_field textarea:disabled {
+  color: black;
+}
+.myJobs .container .banner .card .content .long_field textarea:enabled {
+  border-bottom: 1px solid black;
+}
+.myJobs .container .banner .card .content .long_field textarea:focus,
+.myJobs .container .banner .card .content input:focus {
+  outline: none;
+}
+.myJobs .container .banner .card .button_wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.myJobs .container .banner .card .button_wrapper .edit_btn,
+.myJobs .container .banner .card .button_wrapper .delete_btn {
+  width: 120px;
+  color: black; /* White text color for buttons */
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 7px;
+  border: none;
+  background: green;
+  border-radius: 5px; /* Rounded corners for buttons */
+}
+.myJobs .container .banner .card .button_wrapper .delete_btn {
+  background: red;
+}
+.myJobs .container .banner .card .button_wrapper .check_btn {
+  background: transparent;
+  color: black;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  width: 50px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.myJobs .container .banner .card .button_wrapper .check_btn:hover {
+  transition: all 0.3s;
+  background: black;
+  color: #184235;
+}
+.myJobs .container .banner .card .button_wrapper .cross_btn {
+  background: transparent;
+  color: #d9534f;
+  border: 1px solid #d9534f;
+  border-radius: 7px;
+  width: 50px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.myJobs .container .banner .card .button_wrapper .cross_btn:hover {
+  transition: all 0.3s;
+  background: #d9534f;
+  color: black;
+}
+.myJobs .container .banner .card .button_wrapper .edit_btn_wrapper {
+  gap: 20px;
+  display: flex;
+}
+@media (max-width: 1520px) {
+  .myJobs .container {
+    min-width: 100%;
+  }
+}
+@media (max-width: 830px) {
+  .myJobs .container .banner .card {
+    flex-direction: column;
+  }
+  .myJobs .container .banner .card .content {
+    flex-direction: column;
+  }
+  .myJobs .container .banner .card .content .long_field,
+  .myJobs .container .banner .card .content .short_fields {
+    gap: 8px;
+  }
+  .myJobs .container .banner .card .content .short_fields div,
+  .myJobs .container .banner .card .content .long_fields div {
+    gap: 8px;
+  }
+}
+
+/* Styling for the navigation bar */
+/* Basic styling for the navigation bar */
+nav {
+  background: #0056b3;
+  padding: 0 20px;
+}
+
+nav .container {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  width: 120px;
+  height: 120px;
+}
+
+nav .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Menu styling */
+nav .menu {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Button styling */
+nav .menu button {
+  color: #f1f3f6;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  position: relative;
+  font-weight: 300;
+  padding: 0;
+}
+
+nav .menu button:hover {
+  color: #2d5649;
+}
+
+nav .menu button::before {
+  content: "";
+  position: absolute;
+  background: #184235;
+  height: 1px;
+  width: 100%;
+  left: -100%;
+  bottom: -2px; /* Slightly below the button text */
+  transition: all 0.3s;
+}
+
+nav .menu button:hover::before {
+  left: 0;
+}
+
+/* Logout button styling */
+nav .menu .logout-button {
+  padding: 7px 14px;
+  border: 1px solid #f1f3f6;
+}
+
+nav .menu .logout-button:hover {
+  color: #f1f3f6;
+  background: #184235;
+  border: 1px solid #184235;
+  font-weight: 500;
+}
+
+/* Hamburger menu styling */
+nav .hamburger {
+  display: none;
+}
+
+nav .hamburger svg {
+  font-size: 35px;
+  color: #f1f3f6;
+  cursor: pointer;
+}
+
+
+/* Mobile view adjustments */
+@media (max-width: 1130px) {
+  nav .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    background: #18191c;
+    width: 100%;
+    height: calc(100% - 60px);
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    transition: all 0.3s;
+    overflow-y: auto;
+    box-shadow: 9px 0px 16px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .show-menu {
+    left: 0;
+  }
+
+  .menu li a {
+    color: #f1f3f6;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .menu button {
+    color: #f1f3f6;
+    border: 1px solid #f1f3f6;
+    font-weight: 600;
+  }
+
+  .menu button:hover {
+    background: #18191c;
+    color: #f1f3f6;
+  }
+
+  nav .hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 490px) {
+  .menu {
+    padding-left: 10px;
+  }
+}
+
+
+.notfound {
+  min-height: 750px;
+}
+.notfound .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.notfound .content a {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 7px 30px;
+  background: transparent;
+  border: 1px solid #184235;
+  color: #184235;
+  text-decoration: none;
+}
+.notfound .content a:hover {
+  background: #184235;
+  transition: all 0.3s;
+  color: #f1f3f6;
+}
+.resume-modal {
+  width: 100%;
+  display: flex;
+  background: #00000085;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.resume-modal .modal-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.resume-modal .modal-content .close {
+  position: absolute;
+  right: 36px;
+  top: 35px;
+  font-size: 50px;
+  color: #d9534f;
+}
+.resume-modal .modal-content .close:hover {
+  cursor: pointer;
+}
+.resume-modal .modal-content img {
+  max-width: 550px;
+  height: auto;
+}
+@media (max-width: 1130px) {
+  .resume-modal {
+    z-index: 11;
+  }
+}

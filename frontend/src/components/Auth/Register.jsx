@@ -24,6 +24,7 @@ const Register = () => {
     try {
       const { data } = await axios.post(
         "https://tap-pi-rust.vercel.app/api/v1/user/register",
+
         { name, phone, email, role, password },
         {
           headers: {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -26,3 +27,7 @@ dist-ssr
 
 # Environment configuration
 **/config.env
+=======
+node_modules/
+
+sendMail.js
